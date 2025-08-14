@@ -8,9 +8,6 @@ class Customer:
     def full_name(self):
         return f"{self.first_name} {self.family_name}"
 
-    def age(self):
-        return f"{self.age}"
-
     def entry_fee(self):
         if self.age <= 3:
             entry_fee = 0
