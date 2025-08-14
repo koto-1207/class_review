@@ -13,19 +13,16 @@ class Customer:
 
     def entry_fee(self):
         if self.age <= 3:
-            return 0
-
+            entry_fee = 0
         elif self.age < 20:
-            return 1000
-
+            entry_fee = 1000
         elif 20 <= self.age < 65:
-            return 1500
-
+            entry_fee = 1500
         elif 65 <= self.age < 75:
-            return 1200
-
+            entry_fee = 1200
         else:
-            return 500
+            entry_fee = 500
+        return entry_fee
 
     def info_tsv(self):
         return f"{self.full_name()}\t{self.age}\t{self.entry_fee()}"
@@ -39,18 +36,20 @@ tom = Customer(first_name="Tom", family_name="Ford", age=57)
 ieyasu = Customer(first_name="Ieyasu", family_name="Tokugawa", age=75)
 michelle = Customer(first_name="Michelle", family_name="Tanner", age=3)
 
-
+# c-5,6
 print(ken.entry_fee())  # 1000 という値を出力
 print(tom.entry_fee())  # 1500 という値を出力
 print(ieyasu.entry_fee())  # 1200 という値を出力
 print(michelle.entry_fee())  # 0 という値を出力
 
+# c-7
 print(ken.info_tsv())  # "Ken Tanaka,15,1000" という値を出力
 print(tom.info_tsv())  # "Tom Ford,57,1500" という値を出力
 print(ieyasu.info_tsv())  # "Ieyasu Tokugawa,75,1200" という値を出力
-print(michelle.info_tsv()) 
+print(michelle.info_tsv())
 
+# c-8
 print(ken.info_pipe())  # "Ken Tanaka,15,1000" という値を出力
 print(tom.info_pipe())  # "Tom Ford,57,1500" という値を出力
 print(ieyasu.info_pipe())  # "Ieyasu Tokugawa,75,1200" という値を出
-print(michelle.info_pipe()) 
+print(michelle.info_pipe())
