@@ -1,5 +1,4 @@
 class Customer:
-    # 各問のコードが期待通り動作するように実装
     def __init__(self, first_name, family_name, age):
         self.first_name = first_name
         self.family_name = family_name
